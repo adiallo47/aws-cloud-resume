@@ -22,7 +22,7 @@
 
 name: hello-world
 'on': push
-branchs: '-main'
+branchs: main
 jobs:
   my-job:
     runs-on: ubuntu-latest
