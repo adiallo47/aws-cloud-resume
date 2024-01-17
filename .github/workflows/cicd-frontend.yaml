@@ -22,7 +22,7 @@
 
 name: hello-world
 on: 
-  push
+  push:
     branches: 
         -main
 jobs:
