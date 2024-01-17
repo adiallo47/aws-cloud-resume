@@ -21,10 +21,8 @@
 #       AWS_S3BUCKET:
 
 name: hello-world
-on: push
-branchs:
--main 
-
+'on': push
+branchs: '-main'
 jobs:
   my-job:
     runs-on: ubuntu-latest
