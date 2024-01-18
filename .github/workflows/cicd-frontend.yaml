@@ -6,9 +6,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
+      - name: Checkout Repo, S3 SYNC
         uses: actions/checkout@master
-      - name: S3 SYNC
         uses: jakejarvis/s3-sync-action@master
     with:
         args: --acl public-read --follow-symlinks
