@@ -3,24 +3,23 @@ name: S3-BUCKET
 on: push
 
 jobs:
-    deployment:
-      runs-on: ubuntu-latest
-      steps:
-        - name: S3 SYNC
-        - uses: actions/checkout@master
-        - uses: jakejarvis/s3-sync-action@master
-      with:
-          args: --acl public-read --follow-symlinks
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: S3 SYNC
+      - uses: actions/checkout@master
+      - uses: jakejarvis/s3-sync-action@master
+    with:
+        args: --acl public-read --follow-symlinks
           
-    #autentication to bucket
+      # Authentication to bucket
       env:
-        AWS_S3_BUCKET:
-          description: "aws-cloud-resume"
-        # AWS_SECRET_BUCKET:
+        AWS_S3_BUCKET: "aws-cloud-resume"
         AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
         AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
         AWS_REGION: 'us-east-1'
         SOURCE_DIRECTORY: 'awscloud'
+
       
     # runs:
     #   using: "docker"
