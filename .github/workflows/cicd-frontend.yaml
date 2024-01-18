@@ -1,25 +1,3 @@
-# name: Update S3 Bucket
-# run-name: ${{ github.actor }} cloud resume
-
-# #push on main branch
-# on: 
-#   push:
-#     branches:
-#       -main 
-
-# jobs:
-#   deployment:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: deploy
-#       - uses: actions/checkout@master
-#       - run: echo "hello"
-
-# #autentication to bucket
-#     environment:
-#       name: AWS
-#       AWS_S3BUCKET:
-
 name: S3-BUCKET
 
 on: push
