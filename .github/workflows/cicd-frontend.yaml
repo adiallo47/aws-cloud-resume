@@ -6,12 +6,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 'S3 SYNC'
-      - uses: actions/checkout@master
-      - uses: jakejarvis/s3-sync-action@master
+      - name: S3 SYNC
+        uses: actions/checkout@master
+        uses: jakejarvis/s3-sync-action@master
     with:
         args: --acl public-read --follow-symlinks
-          
       # Authentication to bucket
     env:
       AWS_S3_BUCKET: "aws-cloud-resume"
